@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="bilgimYokModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
   <EntityContainer Name="bilgimYokEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="gazete" EntityType="bilgimYokModel.gazete" />
-    <EntitySet Name="haber" EntityType="bilgimYokModel.haber" />
-    <EntitySet Name="kategori" EntityType="bilgimYokModel.kategori" />
-    <EntitySet Name="kaynak" EntityType="bilgimYokModel.kaynak" />
-    <EntitySet Name="log" EntityType="bilgimYokModel.log" />
-    <EntitySet Name="sysdiagrams" EntityType="bilgimYokModel.sysdiagrams" />
+    <EntitySet Name="gazetes" EntityType="bilgimYokModel.gazete" />
+    <EntitySet Name="habers" EntityType="bilgimYokModel.haber" />
+    <EntitySet Name="kategoris" EntityType="bilgimYokModel.kategori" />
+    <EntitySet Name="kaynaks" EntityType="bilgimYokModel.kaynak" />
+    <EntitySet Name="logs" EntityType="bilgimYokModel.log" />
+    <EntitySet Name="sysdiagrams" EntityType="bilgimYokModel.sysdiagram" />
     <AssociationSet Name="FK_kaynak_gazete" Association="bilgimYokModel.FK_kaynak_gazete">
-      <End Role="gazete" EntitySet="gazete" />
-      <End Role="kaynak" EntitySet="kaynak" />
+      <End Role="gazete" EntitySet="gazetes" />
+      <End Role="kaynak" EntitySet="kaynaks" />
     </AssociationSet>
     <AssociationSet Name="FK_haber_kaynak" Association="bilgimYokModel.FK_haber_kaynak">
-      <End Role="kaynak" EntitySet="kaynak" />
-      <End Role="haber" EntitySet="haber" />
+      <End Role="kaynak" EntitySet="kaynaks" />
+      <End Role="haber" EntitySet="habers" />
     </AssociationSet>
     <AssociationSet Name="FK_log_haber" Association="bilgimYokModel.FK_log_haber">
-      <End Role="haber" EntitySet="haber" />
-      <End Role="log" EntitySet="log" />
+      <End Role="haber" EntitySet="habers" />
+      <End Role="log" EntitySet="logs" />
     </AssociationSet>
     <AssociationSet Name="FK_kaynak_kategori" Association="bilgimYokModel.FK_kaynak_kategori">
-      <End Role="kategori" EntitySet="kategori" />
-      <End Role="kaynak" EntitySet="kaynak" />
+      <End Role="kategori" EntitySet="kategoris" />
+      <End Role="kaynak" EntitySet="kaynaks" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="gazete">
@@ -30,8 +30,8 @@
     </Key>
     <Property Name="gazete_id" Type="Int32" Nullable="false" />
     <Property Name="gazete_ismi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="gazete_logo" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="kaynak" Relationship="bilgimYokModel.FK_kaynak_gazete" FromRole="gazete" ToRole="kaynak" />
+    <Property Name="gazete_logo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="kaynaks" Relationship="bilgimYokModel.FK_kaynak_gazete" FromRole="gazete" ToRole="kaynak" />
   </EntityType>
   <EntityType Name="haber">
     <Key>
@@ -39,14 +39,14 @@
     </Key>
     <Property Name="haber_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="kaynak_id" Type="Int32" />
-    <Property Name="haber_resim" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
-    <Property Name="haber_basligi" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="haber_resim" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="haber_basligi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="haber_icerigi" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Name="haber_link" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="haber_link" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
     <Property Name="haber_tiklanma" Type="Int32" />
     <Property Name="ekleme_tarihi" Type="DateTime" />
     <NavigationProperty Name="kaynak" Relationship="bilgimYokModel.FK_haber_kaynak" FromRole="haber" ToRole="kaynak" />
-    <NavigationProperty Name="log" Relationship="bilgimYokModel.FK_log_haber" FromRole="haber" ToRole="log" />
+    <NavigationProperty Name="logs" Relationship="bilgimYokModel.FK_log_haber" FromRole="haber" ToRole="log" />
   </EntityType>
   <EntityType Name="kategori">
     <Key>
@@ -54,7 +54,7 @@
     </Key>
     <Property Name="kategori_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="kategori_ismi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="kaynak" Relationship="bilgimYokModel.FK_kaynak_kategori" FromRole="kategori" ToRole="kaynak" />
+    <NavigationProperty Name="kaynaks" Relationship="bilgimYokModel.FK_kaynak_kategori" FromRole="kategori" ToRole="kaynak" />
   </EntityType>
   <EntityType Name="kaynak">
     <Key>
@@ -65,7 +65,7 @@
     <Property Name="kategori_id" Type="Int32" />
     <Property Name="rss_link" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="gazete" Relationship="bilgimYokModel.FK_kaynak_gazete" FromRole="kaynak" ToRole="gazete" />
-    <NavigationProperty Name="haber" Relationship="bilgimYokModel.FK_haber_kaynak" FromRole="kaynak" ToRole="haber" />
+    <NavigationProperty Name="habers" Relationship="bilgimYokModel.FK_haber_kaynak" FromRole="kaynak" ToRole="haber" />
     <NavigationProperty Name="kategori" Relationship="bilgimYokModel.FK_kaynak_kategori" FromRole="kaynak" ToRole="kategori" />
   </EntityType>
   <EntityType Name="log">
@@ -79,7 +79,7 @@
     <Property Name="tiklama_zamani" Type="DateTime" />
     <NavigationProperty Name="haber" Relationship="bilgimYokModel.FK_log_haber" FromRole="log" ToRole="haber" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
+  <EntityType Name="sysdiagram">
     <Key>
       <PropertyRef Name="diagram_id" />
     </Key>

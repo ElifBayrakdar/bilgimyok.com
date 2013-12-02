@@ -1,50 +1,80 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="bilgimyok.com.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="bilgimYok.Site" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<%@ Register Src="~/UserControl/gazete.ascx" TagName="gazete" TagPrefix="uc1" %>
+<%@ Register Src="~/UserControl/kategori.ascx" TagName="kategori" TagPrefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
-    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    <title>Bilgim Yok</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <link rel="stylesheet" href="styles/layout.css" type="text/css" />
+    <script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="scripts/jquery.timers.1.2.js"></script>
+    <script type="text/javascript" src="scripts/jquery.galleryview.2.1.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.galleryview.setup.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
-    <form runat="server">
-    <div class="page">
-        <div class="header">
-            <div class="title">
-                <h1>
-                    My ASP.NET Application
-                </h1>
-            </div>
-            <div class="loginDisplay">
-                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-                    <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
-                    </AnonymousTemplate>
-                    <LoggedInTemplate>
-                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
-                    </LoggedInTemplate>
-                </asp:LoginView>
-            </div>
-            <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
-                    </Items>
-                </asp:Menu>
-            </div>
-        </div>
-        <div class="main">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
-        </div>
-        <div class="clear">
+<body id="top">
+    <form id="form1" runat="server">
+    <div class="wrapper col0">
+        <div id="topline">
+            <p>
+                Mail: info@bilgimyok.com</p>
+            <ul>
+                <uc1:gazete ID="gazete1" runat="server" />
+            </ul>
+            <br class="clear" />
         </div>
     </div>
-    <div class="footer">
-        
+    <!-- ####################################################################################################### -->
+    <div class="wrapper">
+        <div id="header">
+            <div class="fl_left">
+                <h1>
+                    <a href="#"><strong>B</strong>ilgim <strong>Y</strong>ok</a></h1>
+                <p>
+                    Kolay habere ula&#351;&#305;m hizmeti</p>
+            </div>
+            <div class="fl_right">
+                <a href="#">
+                    <img src="images/demo/reklam-alani-banneri.png" alt="" /></a></div>
+            <br class="clear" />
+        </div>
+    </div>
+    <!-- ####################################################################################################### -->
+    <div class="wrapper col2">
+        <div id="topbar">
+            <div id="topnav">
+                <ul>
+                    <uc2:kategori ID="kategori1" runat="server" />
+                </ul>
+            </div>
+            <div id="search">
+                <form action="#" method="post">
+                <fieldset>
+                    <legend>Site Search</legend>
+                        <input type="text" value="Search Our Website&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+                        <input type="submit" name="go" id="go" value="Search" />
+                </fieldset>
+                </form>
+            </div>
+            <br class="clear" />
+        </div>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <!-- ####################################################################################################### -->
+    <div class="wrapper col8">
+        <div id="copyright">
+            <p class="fl_left">
+                Copyright &copy; 2013 - Bütün hakları saklıdır. - <a href="#">www.bilgimyok.com</a></p>
+            <br class="clear" />
+        </div>
     </div>
     </form>
 </body>

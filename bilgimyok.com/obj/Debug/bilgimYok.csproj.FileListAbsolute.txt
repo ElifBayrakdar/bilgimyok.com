@@ -1,0 +1,15 @@
+c:\users\okan\documents\visual studio 2010\Projects\bilgimYok\bilgimYok\bin\bilgimYok.dll
+c:\users\okan\documents\visual studio 2010\Projects\bilgimYok\bilgimYok\bin\bilgimYok.pdb
+c:\users\okan\documents\visual studio 2010\Projects\bilgimYok\bilgimYok\obj\Debug\bilgimYok.dll
+c:\users\okan\documents\visual studio 2010\Projects\bilgimYok\bilgimYok\obj\Debug\bilgimYok.pdb
+C:\Users\Okan\documents\visual studio 2010\Projects\bilgimYok\bilgimYok\obj\Debug\bilgimYok.csprojResolveAssemblyReference.cache
+C:\Users\Okan\Documents\Visual Studio 2010\Projects\bilgimYok\bin\bilgimYok.dll
+C:\Users\Okan\Documents\Visual Studio 2010\Projects\bilgimYok\bin\bilgimYok.pdb
+C:\Users\Okan\Documents\Visual Studio 2010\Projects\bilgimYok\obj\Debug\bilgimYok.csprojResolveAssemblyReference.cache
+C:\Users\Okan\Documents\Visual Studio 2010\Projects\bilgimYok\obj\Debug\bilgimYok.dll
+C:\Users\Okan\Documents\Visual Studio 2010\Projects\bilgimYok\obj\Debug\bilgimYok.pdb
+D:\Proje\bilgimYok\bin\bilgimYok.dll
+D:\Proje\bilgimYok\bin\bilgimYok.pdb
+D:\Proje\bilgimYok\obj\Debug\bilgimYok.csprojResolveAssemblyReference.cache
+D:\Proje\bilgimYok\obj\Debug\bilgimYok.dll
+D:\Proje\bilgimYok\obj\Debug\bilgimYok.pdb

@@ -19,14 +19,14 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("bilgimYokModel", "FK_kaynak_gazete", "gazete", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(bilgimyok.com.gazete), "kaynak", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(bilgimyok.com.kaynak), true)]
-[assembly: EdmRelationshipAttribute("bilgimYokModel", "FK_haber_kaynak", "kaynak", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(bilgimyok.com.kaynak), "haber", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(bilgimyok.com.haber), true)]
-[assembly: EdmRelationshipAttribute("bilgimYokModel", "FK_log_haber", "haber", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(bilgimyok.com.haber), "log", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(bilgimyok.com.log), true)]
-[assembly: EdmRelationshipAttribute("bilgimYokModel", "FK_kaynak_kategori", "kategori", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(bilgimyok.com.kategori), "kaynak", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(bilgimyok.com.kaynak), true)]
+[assembly: EdmRelationshipAttribute("bilgimYokModel", "FK_kaynak_gazete", "gazete", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(bilgimYok.gazete), "kaynak", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(bilgimYok.kaynak), true)]
+[assembly: EdmRelationshipAttribute("bilgimYokModel", "FK_haber_kaynak", "kaynak", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(bilgimYok.kaynak), "haber", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(bilgimYok.haber), true)]
+[assembly: EdmRelationshipAttribute("bilgimYokModel", "FK_log_haber", "haber", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(bilgimYok.haber), "log", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(bilgimYok.log), true)]
+[assembly: EdmRelationshipAttribute("bilgimYokModel", "FK_kaynak_kategori", "kategori", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(bilgimYok.kategori), "kaynak", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(bilgimYok.kaynak), true)]
 
 #endregion
 
-namespace bilgimyok.com
+namespace bilgimYok
 {
     #region Contexts
     
@@ -77,149 +77,149 @@ namespace bilgimyok.com
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<gazete> gazete
+        public ObjectSet<gazete> gazetes
         {
             get
             {
-                if ((_gazete == null))
+                if ((_gazetes == null))
                 {
-                    _gazete = base.CreateObjectSet<gazete>("gazete");
+                    _gazetes = base.CreateObjectSet<gazete>("gazetes");
                 }
-                return _gazete;
+                return _gazetes;
             }
         }
-        private ObjectSet<gazete> _gazete;
+        private ObjectSet<gazete> _gazetes;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<haber> haber
+        public ObjectSet<haber> habers
         {
             get
             {
-                if ((_haber == null))
+                if ((_habers == null))
                 {
-                    _haber = base.CreateObjectSet<haber>("haber");
+                    _habers = base.CreateObjectSet<haber>("habers");
                 }
-                return _haber;
+                return _habers;
             }
         }
-        private ObjectSet<haber> _haber;
+        private ObjectSet<haber> _habers;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<kategori> kategori
+        public ObjectSet<kategori> kategoris
         {
             get
             {
-                if ((_kategori == null))
+                if ((_kategoris == null))
                 {
-                    _kategori = base.CreateObjectSet<kategori>("kategori");
+                    _kategoris = base.CreateObjectSet<kategori>("kategoris");
                 }
-                return _kategori;
+                return _kategoris;
             }
         }
-        private ObjectSet<kategori> _kategori;
+        private ObjectSet<kategori> _kategoris;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<kaynak> kaynak
+        public ObjectSet<kaynak> kaynaks
         {
             get
             {
-                if ((_kaynak == null))
+                if ((_kaynaks == null))
                 {
-                    _kaynak = base.CreateObjectSet<kaynak>("kaynak");
+                    _kaynaks = base.CreateObjectSet<kaynak>("kaynaks");
                 }
-                return _kaynak;
+                return _kaynaks;
             }
         }
-        private ObjectSet<kaynak> _kaynak;
+        private ObjectSet<kaynak> _kaynaks;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<log> log
+        public ObjectSet<log> logs
         {
             get
             {
-                if ((_log == null))
+                if ((_logs == null))
                 {
-                    _log = base.CreateObjectSet<log>("log");
+                    _logs = base.CreateObjectSet<log>("logs");
                 }
-                return _log;
+                return _logs;
             }
         }
-        private ObjectSet<log> _log;
+        private ObjectSet<log> _logs;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<sysdiagrams> sysdiagrams
+        public ObjectSet<sysdiagram> sysdiagrams
         {
             get
             {
                 if ((_sysdiagrams == null))
                 {
-                    _sysdiagrams = base.CreateObjectSet<sysdiagrams>("sysdiagrams");
+                    _sysdiagrams = base.CreateObjectSet<sysdiagram>("sysdiagrams");
                 }
                 return _sysdiagrams;
             }
         }
-        private ObjectSet<sysdiagrams> _sysdiagrams;
+        private ObjectSet<sysdiagram> _sysdiagrams;
 
         #endregion
 
         #region AddTo Methods
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the gazete EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the gazetes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTogazete(gazete gazete)
+        public void AddTogazetes(gazete gazete)
         {
-            base.AddObject("gazete", gazete);
+            base.AddObject("gazetes", gazete);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the haber EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the habers EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTohaber(haber haber)
+        public void AddTohabers(haber haber)
         {
-            base.AddObject("haber", haber);
+            base.AddObject("habers", haber);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the kategori EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the kategoris EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTokategori(kategori kategori)
+        public void AddTokategoris(kategori kategori)
         {
-            base.AddObject("kategori", kategori);
+            base.AddObject("kategoris", kategori);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the kaynak EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the kaynaks EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTokaynak(kaynak kaynak)
+        public void AddTokaynaks(kaynak kaynak)
         {
-            base.AddObject("kaynak", kaynak);
+            base.AddObject("kaynaks", kaynak);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the log EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the logs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTolog(log log)
+        public void AddTologs(log log)
         {
-            base.AddObject("log", log);
+            base.AddObject("logs", log);
         }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTosysdiagrams(sysdiagrams sysdiagrams)
+        public void AddTosysdiagrams(sysdiagram sysdiagram)
         {
-            base.AddObject("sysdiagrams", sysdiagrams);
+            base.AddObject("sysdiagrams", sysdiagram);
         }
 
         #endregion
@@ -346,7 +346,7 @@ namespace bilgimyok.com
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("bilgimYokModel", "FK_kaynak_gazete", "kaynak")]
-        public EntityCollection<kaynak> kaynak
+        public EntityCollection<kaynak> kaynaks
         {
             get
             {
@@ -643,7 +643,7 @@ namespace bilgimyok.com
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("bilgimYokModel", "FK_log_haber", "log")]
-        public EntityCollection<log> log
+        public EntityCollection<log> logs
         {
             get
             {
@@ -752,7 +752,7 @@ namespace bilgimyok.com
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("bilgimYokModel", "FK_kaynak_kategori", "kaynak")]
-        public EntityCollection<kaynak> kaynak
+        public EntityCollection<kaynak> kaynaks
         {
             get
             {
@@ -945,7 +945,7 @@ namespace bilgimyok.com
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("bilgimYokModel", "FK_haber_kaynak", "haber")]
-        public EntityCollection<haber> haber
+        public EntityCollection<haber> habers
         {
             get
             {
@@ -1200,26 +1200,26 @@ namespace bilgimyok.com
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="bilgimYokModel", Name="sysdiagrams")]
+    [EdmEntityTypeAttribute(NamespaceName="bilgimYokModel", Name="sysdiagram")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class sysdiagrams : EntityObject
+    public partial class sysdiagram : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new sysdiagrams object.
+        /// Create a new sysdiagram object.
         /// </summary>
         /// <param name="name">Initial value of the name property.</param>
         /// <param name="principal_id">Initial value of the principal_id property.</param>
         /// <param name="diagram_id">Initial value of the diagram_id property.</param>
-        public static sysdiagrams Createsysdiagrams(global::System.String name, global::System.Int32 principal_id, global::System.Int32 diagram_id)
+        public static sysdiagram Createsysdiagram(global::System.String name, global::System.Int32 principal_id, global::System.Int32 diagram_id)
         {
-            sysdiagrams sysdiagrams = new sysdiagrams();
-            sysdiagrams.name = name;
-            sysdiagrams.principal_id = principal_id;
-            sysdiagrams.diagram_id = diagram_id;
-            return sysdiagrams;
+            sysdiagram sysdiagram = new sysdiagram();
+            sysdiagram.name = name;
+            sysdiagram.principal_id = principal_id;
+            sysdiagram.diagram_id = diagram_id;
+            return sysdiagram;
         }
 
         #endregion

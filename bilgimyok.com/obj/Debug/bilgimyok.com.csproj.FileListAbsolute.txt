@@ -1,4 +1,0 @@
-C:\Users\Okan\Documents\GitHub\bilgimyok.com\bilgimyok.com\bilgimyok.com\bin\bilgimyok.com.dll
-C:\Users\Okan\Documents\GitHub\bilgimyok.com\bilgimyok.com\bilgimyok.com\bin\bilgimyok.com.pdb
-C:\Users\Okan\Documents\GitHub\bilgimyok.com\bilgimyok.com\bilgimyok.com\obj\Debug\bilgimyok.com.dll
-C:\Users\Okan\Documents\GitHub\bilgimyok.com\bilgimyok.com\bilgimyok.com\obj\Debug\bilgimyok.com.pdb

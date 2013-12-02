@@ -30,7 +30,7 @@
     </Key>
     <Property Name="gazete_id" Type="int" Nullable="false" />
     <Property Name="gazete_ismi" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="gazete_logo" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="gazete_logo" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
   <EntityType Name="haber">
     <Key>
@@ -38,10 +38,10 @@
     </Key>
     <Property Name="haber_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="kaynak_id" Type="int" />
-    <Property Name="haber_resim" Type="nvarchar" Nullable="false" MaxLength="500" />
-    <Property Name="haber_basligi" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="haber_resim" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="haber_basligi" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="haber_icerigi" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="haber_link" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="haber_link" Type="nvarchar" Nullable="false" MaxLength="150" />
     <Property Name="haber_tiklanma" Type="int" />
     <Property Name="ekleme_tarihi" Type="datetime" />
   </EntityType>

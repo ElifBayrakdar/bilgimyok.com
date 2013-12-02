@@ -6,12 +6,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3FCED714-BEEF-4019-B033-FEB63F59361C}</ProjectGuid>
+    <ProjectGuid>{3065E4F0-0AC8-4E40-858C-3DBE18B4C872}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>bilgimyok.com</RootNamespace>
-    <AssemblyName>bilgimyok.com</AssemblyName>
+    <RootNamespace>bilgimYok</RootNamespace>
+    <AssemblyName>bilgimYok</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
@@ -34,13 +34,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -49,11 +52,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
     <Content Include="images\black_file.gif" />
     <Content Include="images\blue_file.gif" />
     <Content Include="images\demo\1.gif" />
@@ -81,29 +82,32 @@
     <Content Include="images\galleryviewthemes\dark\panel-nav-next.gif" />
     <Content Include="images\galleryviewthemes\dark\panel-nav-prev.gif" />
     <Content Include="images\galleryviewthemes\dark\prev.gif" />
+    <Content Include="images\galleryviewthemes\index.html" />
     <Content Include="images\galleryviewthemes\light\index.html" />
     <Content Include="images\galleryviewthemes\light\next.gif" />
     <Content Include="images\galleryviewthemes\light\panel-nav-next.gif" />
     <Content Include="images\galleryviewthemes\light\panel-nav-prev.gif" />
     <Content Include="images\galleryviewthemes\light\prev.gif" />
     <Content Include="images\galleryviewthemes\loader.gif" />
+    <Content Include="images\index.html" />
     <Content Include="images\rss.gif" />
     <Content Include="images\twitter.gif" />
-    <Content Include="Scripts\jquery.easing.1.3.js" />
-    <Content Include="Scripts\jquery.galleryview-2.1.1.js" />
-    <Content Include="Scripts\jquery.galleryview.2.1.1.min.js" />
-    <Content Include="Scripts\jquery.galleryview.setup.js" />
-    <Content Include="Scripts\jquery.timers.1.2.js" />
-    <Content Include="Default.aspx" />
-    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.4.1.js" />
-    <Content Include="Scripts\jquery-1.4.1.min.js" />
-    <Content Include="Styles\featured_slide.css" />
-    <Content Include="Styles\forms.css" />
-    <Content Include="Styles\layout.css" />
-    <Content Include="Styles\navi.css" />
-    <Content Include="Styles\tables.css" />
-    <Content Include="Web.config" />
+    <Content Include="scripts\index.html" />
+    <Content Include="scripts\jquery-1.4.1.min.js" />
+    <Content Include="scripts\jquery.easing.1.3.js" />
+    <Content Include="scripts\jquery.galleryview-2.1.1.js" />
+    <Content Include="scripts\jquery.galleryview.2.1.1.min.js" />
+    <Content Include="scripts\jquery.galleryview.setup.js" />
+    <Content Include="scripts\jquery.timers.1.2.js" />
+    <Content Include="styles\featured_slide.css" />
+    <Content Include="styles\forms.css" />
+    <Content Include="styles\index.html" />
+    <Content Include="styles\layout.css" />
+    <Content Include="styles\navi.css" />
+    <Content Include="styles\tables.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -112,17 +116,17 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bilgimYokData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bilgimYokData.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gazete_data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gazete_data.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -134,9 +138,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="bilgimYokData.edmx">
+    <EntityDeploy Include="gazete_data.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>bilgimYokData.Designer.cs</LastGenOutput>
+      <LastGenOutput>gazete_data.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
@@ -150,7 +154,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49390</DevelopmentServerPort>
+          <DevelopmentServerPort>64607</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

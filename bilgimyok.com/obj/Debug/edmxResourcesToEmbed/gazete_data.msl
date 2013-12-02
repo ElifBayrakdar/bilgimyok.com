@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="bilgimYokModelStoreContainer" CdmEntityContainer="bilgimYokEntities">
-    <EntitySetMapping Name="gazete">
+    <EntitySetMapping Name="gazetes">
       <EntityTypeMapping TypeName="bilgimYokModel.gazete">
         <MappingFragment StoreEntitySet="gazete">
           <ScalarProperty Name="gazete_id" ColumnName="gazete_id" />
@@ -10,7 +10,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="haber">
+    <EntitySetMapping Name="habers">
       <EntityTypeMapping TypeName="bilgimYokModel.haber">
         <MappingFragment StoreEntitySet="haber">
           <ScalarProperty Name="haber_id" ColumnName="haber_id" />
@@ -24,7 +24,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="kategori">
+    <EntitySetMapping Name="kategoris">
       <EntityTypeMapping TypeName="bilgimYokModel.kategori">
         <MappingFragment StoreEntitySet="kategori">
           <ScalarProperty Name="kategori_id" ColumnName="kategori_id" />
@@ -32,7 +32,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="kaynak">
+    <EntitySetMapping Name="kaynaks">
       <EntityTypeMapping TypeName="bilgimYokModel.kaynak">
         <MappingFragment StoreEntitySet="kaynak">
           <ScalarProperty Name="kaynak_id" ColumnName="kaynak_id" />
@@ -42,7 +42,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="log">
+    <EntitySetMapping Name="logs">
       <EntityTypeMapping TypeName="bilgimYokModel.log">
         <MappingFragment StoreEntitySet="log">
           <ScalarProperty Name="log_id" ColumnName="log_id" />
@@ -54,7 +54,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="bilgimYokModel.sysdiagrams">
+      <EntityTypeMapping TypeName="bilgimYokModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
