@@ -105,9 +105,12 @@
     <Content Include="styles\layout.css" />
     <Content Include="styles\navi.css" />
     <Content Include="styles\tables.css" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="UserControl\gazete.ascx" />
+    <Content Include="UserControl\kategori.ascx" />
+    <Content Include="UserControl\OrtakKullanim.ascx" />
+    <Content Include="UserControl\SliderMiddleBig.ascx" />
+    <Content Include="UserControl\SliderRightTop.ascx" />
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -135,6 +138,41 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\gazete.ascx.cs">
+      <DependentUpon>gazete.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\gazete.ascx.designer.cs">
+      <DependentUpon>gazete.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\kategori.ascx.cs">
+      <DependentUpon>kategori.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\kategori.ascx.designer.cs">
+      <DependentUpon>kategori.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\OrtakKullanim.ascx.cs">
+      <DependentUpon>OrtakKullanim.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\OrtakKullanim.ascx.designer.cs">
+      <DependentUpon>OrtakKullanim.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SliderMiddleBig.ascx.cs">
+      <DependentUpon>SliderMiddleBig.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SliderMiddleBig.ascx.designer.cs">
+      <DependentUpon>SliderMiddleBig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SliderRightTop.ascx.cs">
+      <DependentUpon>SliderRightTop.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SliderRightTop.ascx.designer.cs">
+      <DependentUpon>SliderRightTop.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
